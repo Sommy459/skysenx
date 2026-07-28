@@ -1,0 +1,1675 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Tablet layout */
+@media (max-width: 1000px){
+    .nav{
+        padding: 14px 24px;
+    }
+
+    .menu-toggle{
+        display: block;
+        z-index: 1001;
+    }
+
+    .nav-link{
+        position: fixed;
+        inset: 0 0 0 auto;
+        width: min(82vw, 320px);
+        height: 100dvh;
+        padding: 84px 28px 28px;
+        background: #f6fcff;
+        box-shadow: -8px 0 24px rgba(0, 0, 0, .15);
+        transform: translateX(100%);
+        transition: transform .3s ease;
+    
+    }
+
+    .nav-link.active{
+        transform: translateX(0);
+    }
+
+    .nav-link ul{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+    }
+
+    .close-menu{
+        display: block;
+        position: absolute;
+        top: 16px;
+        right: 20px;
+        font-size: 36px;
+        line-height: 1;
+        cursor: pointer;
+    }
+
+    .hero{
+        padding-inline: 24px;
+    }
+
+    .hero-title{
+        font-size: clamp(42px, 6vw, 54px);
+    }
+
+    .shape{
+        padding: 56px 24px;
+    }
+
+    .shape3{
+        width: min(100%, 760px);
+    }
+
+    .shape-2{
+        display: none;
+    }
+
+    .about,
+    .services,
+    .techcamp,
+    .courses,
+    .image{
+        padding-inline: 24px;
+    }
+
+    .about-content,
+    .techcamp-content{
+        flex-direction: column;
+        width: min(100%, 700px);
+        margin: 0 auto;
+        gap: 32px;
+    }
+
+    .about-content{
+        flex-direction: column-reverse;
+    }
+
+    .about-img,
+    .techcamp-img{
+        max-width: 100%;
+    }
+
+    .ab{
+        max-width: none;
+    }
+
+    .grid,
+    .grid-2{
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        width: min(100%, 820px);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .boot{
+        flex-direction: column-reverse;
+        width: min(100%, 700px);
+        margin: 64px auto;
+        text-align: center;
+    }
+
+    .images{
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        width: min(100%, 820px);
+    }
+
+    .testimonial{
+        width: min(100%, 820px);
+        margin: 70px auto;
+    }
+
+    .faq-section{
+        padding: 72px 24px;
+    }
+
+    .faq-wrapper{
+        width: min(100%, 820px);
+    }
+
+    .footer{
+        flex-direction: column;
+        gap: 48px;
+    }
+
+    .foot1{
+        max-width: 620px;
+    }
+
+    .foot2{
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 24px;
+    }
+
+    .q--q,
+    .contact{
+        width: auto;
+    }
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+    background-color: #F6FCFF;
+}
+
+.nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: #F6FCFF;
+    z-index: 1000;
+
+    padding: 0 20px;
+}
+.nav-link ul{
+    display: flex;
+    gap: 42px;
+}
+.nav-link ul li{
+    list-style: none;
+}
+.nav-link ul li a{
+    text-decoration: none;
+    color: #000000;
+    font-size: 18px;
+    font-weight: 500;
+
+}
+.nav > div:first-child img{
+    width: 140.8px;
+    height: 48px;
+    margin: 16px 0;
+}
+
+.menu-toggle{
+    display: none;
+    font-size: 32px;
+    cursor: pointer;
+    color: #333333;
+    font-weight: 600;
+}
+.close-menu{
+    display: none;
+}
+.mobile-menu-logo{
+    display: none;
+}
+
+/* HERO */
+.hero{
+    background-image: url('../image/Frame 3472555.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    margin  : auto 0 0 0;
+    position: relative;
+}
+/* .hero-image img{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    
+} */
+.hero-content{
+    display: flex;
+}
+
+.hero-image-2{
+    width: 100%;
+    /* position: absolute;
+    bottom: 1px;
+    right: -1050px; */
+    /* right: 100px;  */
+}
+.hero-image-2 img{
+    /* max-width: 70%;
+    height: auto;
+    display: block; */
+
+      width: 100%;
+    max-width: 720px;
+    height: auto;
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: -162px;
+}
+.he-im{
+    display: none;
+}
+.hero-title{
+    font-size: 62px;
+    font-weight: 600;
+    color: #000000;
+   max-width: 500px;
+   width: 100%;
+    margin-top: 120px;
+    margin-left: 120px;
+}
+.hero-con{
+    font-size: 18px;
+    font-weight: 500;
+    color: #000000;
+    max-width: 400px;
+    width: 100%;
+    margin-top: 24px;
+    margin-left: 120px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+}
+.hero-text ul{
+    display: flex;
+    gap: 24px;
+    margin-top: 32px;
+    margin-left: 120px;
+    list-style: none;
+
+}
+
+.hero-text ul li a{
+    text-decoration: none;
+    color: #000000;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 12px 24px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+}
+.a{
+    background-color: #028BD4;
+    color: #FFFFFF !important;
+    border: none !important;
+    
+}
+.a:hover{
+    transform: scale(1.5);
+    background-color: #026da8;
+    cursor: pointer;
+    
+  
+}
+
+.shape{
+    position: relative;
+}
+.shape-1 iframe{
+   width: 50%;
+   height: 50vh;
+   margin: 100px auto;
+   display: block;
+   border-radius: 10px;
+
+    
+}
+.shape-2 img{
+    width: 80%;
+    height:80%;
+    display: block;
+    /* object-fit:cover; */
+    margin: 100px auto;
+    position: absolute;
+    bottom: 10px;
+    left: -150px;
+    object-fit: contain;
+    z-index: -1;
+}
+.shape3{
+    display: none;
+}
+.about{
+    margin-top: 150px;
+}
+.about-content{
+    display: flex;
+    gap: 50px;
+    margin-left: 120px;
+    /* margin-left: 60px; */
+}
+.about-h1{
+    color: #000000;
+    text-align: center;
+    font-weight: 600;
+    font-size: 48px;
+
+}
+.about-img{
+    max-width: 750px;
+    width: 100%;
+    height: auto;
+    margin-top: 30px;
+}
+.about-h2{
+    color: #333333;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 42px;
+}
+.ab{
+    max-width: 550px;
+    width: 100%;
+    margin-top: 100px;
+}
+.ab p{
+    color: #333333;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 150%;
+    padding-top: 24px;
+    padding-bottom: 20px;
+}
+.sec{
+    color: #FCFEFF !important;
+    text-decoration: none;
+    background-color: #028BD4;
+    padding: 14px;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 16px;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 80px;
+    margin-left: 120px;
+    margin-right: 120px;
+}
+.services img{
+    /* width: 10px; */
+   /* margin-left: 6rem; */
+   display: block;
+   margin: 0 auto;
+}
+.services-h1{
+    color: #000000;
+    text-align: center;
+    font-weight: 600;
+    font-size: 48px;
+    margin-top: 100px;
+}
+.services-h2{
+    color: #000000;
+    font-weight: 600;
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.services >div p{
+    color: #333333;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 150%;
+    text-align: center;
+    /* padding-bottom:200px ; */
+}
+.services >div a{
+    color: #FCFEFF !important;
+    text-decoration: none;
+    background-color: #028BD4;
+    padding: 14px;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    display: block;
+    width: 200px;
+    margin: 20px auto 0 auto;
+    text-align: center;
+}
+
+.techcamp-h1{
+    color: #333333 !important;
+    text-align: center;
+    font-weight: 600;
+    font-size: 48px;
+    margin-top: 100px;
+}
+.techcamp-content{
+    display: flex;
+    gap: 50px;
+    margin-left: 120px;
+    /* margin-top: 80px; */
+}
+.ab h1{
+    color: #000000;
+    font-weight: 600;
+    font-size: 36px;
+
+}
+.ab .p{
+    color:#000000;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 150%;
+    padding-top: 24px;
+    padding-bottom: 20px;
+}
+.ab .sec{
+    color: red;
+    text-decoration: none;
+    background-color: #028BD4;
+    padding: 14px;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    display: block;
+    width: 150px;
+    text-align: center;
+}
+.techcamp-img{
+    max-width: 700px;
+    width: 100%;
+    height: 550px;
+    margin-top: 30px;
+    object-fit: contain;
+}
+.courses-h1{
+    color:#333333;
+    text-align: center;
+    font-weight: 600;
+    font-size: 48px;
+    margin-top: 100px;
+}
+.grid-2{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    margin-top: 40px;
+    margin-left: 120px;
+    margin-right: 120px;
+}
+.grid-2 >div{
+    /* background-color: red; */
+    padding: 20px;
+    max-width: 418px;
+    border: 1px solid #D9D9D9;
+    border-radius: 10px;
+}
+.grid-2 >div img{
+    width: 100%;
+    max-width: 360px;
+    height: 300px;
+    object-fit: cover;
+}
+.grid-2 >div h2{
+    color: #1E1E1E;
+    font-weight: 600;
+    font-size: 26px;
+    margin-top: 16px;
+}
+.grid-2 >div h1{
+    color: #1E1E1E;
+    font-weight: semi-bold;
+    font-size: 27px;
+    margin-top: 8px;
+}
+.grid-2 >div p{
+    color: #000000;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 150%;
+    margin-top: 16px;
+}
+.grid-2 >div a{
+   color: #FCFEFF;
+   text-decoration: none;
+   background-color: #028BD4;
+   padding: 15px;
+   margin:10px 0 0 0;
+   border-radius: 10px;
+   display: block;
+   text-align: center;
+   width: 150px;
+}
+.boot{
+    display: flex;
+    margin: 7rem;
+    gap: 3rem;
+}
+.boot h1{
+    color: red;
+    font-size: 38px;
+    font-size: 600;
+    margin-top: 7rem;
+    color: #333333;
+}
+.image h1{
+    color:#333333;
+    text-align: center;
+    font-weight: 600;
+    font-size: 48px;
+    margin: 30px auto;
+}
+.images{
+   display: grid;
+   grid-template-columns:1fr 1fr 1fr 1fr 1fr;
+    gap: 2rem;
+    margin-left: 5rem;
+    margin-right: 4rem;
+    overflow: hidden;
+}
+.images img{
+    width: 100%;
+     max-width: 250px;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    will-change: transform;
+    transform: translateZ(0);
+    border-radius: 10px;
+}
+
+.images img:hover{
+    transform: scale(1.05);
+  
+}
+.gallery-slider{
+    width: 100%;
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 0 20px;
+}
+
+.slider-wrapper{
+    overflow: hidden;
+    width: 100%;
+}
+
+.slider-track{
+    display: flex;
+    gap: 20px;
+    transition: transform 0.6s ease-in-out;
+}
+
+.slider-track img{
+    width: calc((100% - 40px) / 3);
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+
+/* Dots */
+
+.slider-dots{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.dot{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #d9d9d9;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.dot.active{
+    background: #028BD4;
+    transform: scale(1.2);
+}
+
+.testimonial{
+    width: 100%;
+    max-width: 1100px;
+    margin: 90px auto;
+    padding: 0 20px;
+}
+
+.testimonial h1{
+    color: #333333;
+    text-align: center;
+    font-weight: 600;
+    font-size: 48px;
+    margin-bottom: 45px;
+}
+
+.testimonial-carousel{
+    position: relative;
+}
+
+.testimonial-window{
+    overflow: hidden;
+}
+
+.testimonial-track{
+    display: flex;
+    gap: 54px;
+    transition: transform 0.5s ease;
+}
+
+.testimonial-card{
+    flex: 0 0 calc((100% - 54px) / 2);
+    overflow: hidden;
+    border-radius: 10px;
+    background: #F8FAFC;
+    box-shadow: 0 0 0 1px rgba(6, 14, 59, 0.08), 0 8px 24px rgba(6, 14, 59, 0.16);
+}
+
+.testimonial-copy{
+    position: relative;
+    min-height: 300px;
+    padding: 28px 24px 88px;
+    background: #F8FAFC;
+}
+
+.testimonial-copy p{
+    color: #333333;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.testimonial-copy span{
+    position: absolute;
+    right: 36px;
+    bottom: 40px;
+    color: #E8E8E8;
+    font-family: Georgia, serif;
+    font-size: 86px;
+    line-height: 1;
+}
+
+.testimonial-profile{
+    position: relative;
+    min-height: 140px;
+    padding: 76px 20px 18px;
+    background: #0A95D6;
+    text-align: center;
+}
+
+.testimonial-profile img{
+    position: absolute;
+    top: -48px;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    border: 3px solid #FFFFFF;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    transform: translateX(-50%);
+    background: #FFFFFF;
+}
+
+.testimonial-profile h3{
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.testimonial-profile p{
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.testimonial-btn{
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    width: 42px;
+    height: 42px;
+    border: 0;
+    border-radius: 50%;
+    background: #060e3b;
+    color: #FFFFFF;
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+
+.testimonial-prev{
+    left: -58px;
+}
+
+.testimonial-next{
+    right: -58px;
+}
+
+.testimonial-dots{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 26px;
+}
+
+.testimonial-dot{
+    width: 12px;
+    height: 12px;
+    border: 0;
+    border-radius: 50%;
+    background: #D9D9D9;
+    cursor: pointer;
+}
+
+.testimonial-dot.active{
+    background: #028BD4;
+    transform: scale(1.18);
+}
+
+.footer{
+    display: flex;
+    background-color: #060e3b;
+    gap: 6rem;
+    padding: 50px 30px 40px;
+}
+
+.foot1{
+    width: 100%;
+    max-width: 400px;
+}
+
+.foot-logo{
+    width: 210px;
+    margin-bottom: 24px;
+}
+
+.foot1 >div p{
+    color: #FCFEFF;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    margin-bottom: 16px;
+}
+
+.f-link{
+    width: 30px;
+    margin: 5px;
+}
+
+.foot1 footer{
+    color: #F6FCFF;
+    font-weight: 500;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.foot2{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 4rem;
+    width: 100%;
+}
+
+.quick h3{
+    font-weight: 600;
+    font-size: 20px;
+    color: #F6FCFF;
+    margin-bottom: 25px;
+}
+
+.quick ul li{
+    list-style: none;
+    margin-top: 15px;
+}
+
+.quick ul li a{
+    color: #F6FCFF;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.q--q{
+    width: 250px;
+}
+
+.contact{
+    width: 250px;
+}
+
+.contact-item{
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    color: #F6FCFF;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.contact-item i{
+    color: #F6FCFF;
+    font-size: 18px;
+    margin-top: 2px;
+    min-width: 18px;
+}
+
+.contact-item p{
+    margin: 0;
+}
+
+
+
+.faq-section{
+    width:100%;
+    /* max-width: 200px; */
+    padding:100px 20px;
+    /* background-color: #68789a; */
+}
+
+.faq-section h1{
+    text-align:center;
+    font-size:50px;
+    font-weight:600;
+    color:#34354a;
+    margin-bottom:60px;
+}
+
+.faq-wrapper{
+    width:60%;
+    max-width:1100px;
+    margin:auto;
+
+    background-color: #68789a;
+
+    border-radius:20px;
+    overflow:hidden;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+.faq-item{
+    border-bottom:1px solid rgba(255,255,255,.55);
+}
+
+.faq-item:last-child{
+    border-bottom:none;
+}
+
+.faq-btn{
+    width:100%;
+    border:none;
+    background:transparent;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:22px 25px;
+
+    cursor:pointer;
+
+    color:#fff;
+    font-size:21px;
+    font-weight:500;
+
+    text-align:left;
+}
+
+.faq-btn span{
+    flex:1;
+}
+
+.faq-btn i{
+    font-size:15px;
+    color:#fff;
+    transition:.3s;
+}
+
+.faq-content{
+    max-height:0;
+    overflow:hidden;
+    transition:max-height .4s ease;
+}
+
+.faq-content p{
+    color:#fff;
+    font-size:19px;
+    line-height:1.7;
+
+    padding:0 25px 25px;
+}
+
+.faq-item.active .faq-content{
+    max-height:250px;
+}
+
+.faq-item.active .fa-chevron-down{
+    transform:rotate(180deg);
+}
+
+
+/* Responsive for 1200px and below */
+@media (max-width: 1200px) {
+    .landing{
+        overflow-x: hidden;
+    }
+
+    .hero{
+        overflow-x: hidden;
+    }
+    
+    .nav {
+        padding: 0 40px;
+    }
+
+    .nav-link ul {
+        gap: 28px;
+    }
+
+    .nav-link ul li a {
+        font-size: 16px;
+    }
+
+    .nav > div:first-child img {
+        width: 120px;
+        height: auto;
+    }
+
+    /* HERO */
+
+    .hero{
+        min-height: auto;
+        padding: 120px 24px 0;
+    }
+
+    .hero-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-title{
+        font-size: 68px;
+        line-height: 1.1;
+        max-width: 600px;
+        margin: 0;
+    }
+
+    .hero-con{
+        font-size: 18px;
+        line-height: 1.8;
+        max-width: 500px;
+        margin: 24px auto 0;
+    }
+
+    .hero-text ul{
+        justify-content: center;
+        margin: 32px 0 0;
+        padding: 0;
+    }
+    
+    
+    .hero-image-2{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+    }
+
+    .hero-image-2 img{
+        position: static;
+        right: auto;
+        bottom: auto;
+        width: min(100%, 600px);
+        height: auto;
+        display: block;
+    }
+
+
+    /* SHAPE */
+
+    .shape{
+        position: relative;
+        padding: 100px 40px;
+    }
+
+    .shape-1 iframe{
+        display: none;
+    }
+    .shape3{
+        width: min(90%, 1000px);
+        aspect-ratio: 16 / 9;
+        height: auto;
+        margin: 0 auto;
+        overflow: hidden;
+        border-radius: 10px;
+        display: block;
+    }
+
+    .shape3 iframe{
+        display: block;
+        width: 100%;
+        height: 100%;
+        border: 0;
+        border-radius: inherit;
+    }
+    .shape-2{
+        position: absolute;
+        bottom: 270px;
+        left: 200px;
+        z-index: -1;
+    }
+
+    .shape-2 img{
+        width: 350px;
+        height: auto;
+        margin: 0;
+        display: block;
+        object-fit: contain;
+    }
+
+    /* ABOUT */
+
+    .about{
+        margin-top: 100px;
+        padding: 0 40px;
+    }
+
+    .about-h1{
+        font-size: 40px;
+        margin-bottom: 50px;
+    }
+
+    .about-content{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        margin-left: 0;
+    }
+
+    .about-img{
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+        margin-top: 0;
+    }
+
+    .ab{
+        max-width: 450px;
+        margin-top: 0;
+    }
+
+    .about-h2{
+        font-size: 30px;
+        line-height: 38px;
+    }
+
+    .ab p{
+        font-size: 16px;
+        line-height: 1.7;
+        padding: 20px 0;
+    }
+
+    .sec{
+        padding: 12px 20px;
+        font-size: 15px;
+    }
+
+    /* SERVICE */
+
+    .services{
+        padding: 0 40px;
+    }
+
+    .services-h1{
+        font-size: 40px;
+        margin-top: 80px;
+    }
+
+    .grid{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+        margin: 60px 0 0;
+    }
+
+    .services img{
+        display: block;
+        width: 300px;
+        height: auto;
+        margin: 0 auto 20px;
+    }
+
+    .services-h2{
+        font-size: 26px;
+        margin-bottom: 16px;
+    }
+
+    .services > div p{
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    .services > div a{
+        width: 180px;
+        padding: 12px 18px;
+        font-size: 15px;
+    }
+
+    /* TECHCAMP */
+
+    .techcamp{
+        padding: 0 40px;
+    }
+
+    .techcamp-h1{
+        font-size: 42px;
+        margin-top: 80px;
+    }
+
+    .techcamp-content{
+        display: flex;
+        width: min(100%, 1080px);
+        margin: 0 auto;
+        align-items: center;
+        gap: 32px;
+    }
+
+    .techcamp-content .ab,
+    .techcamp-content > div:last-child{
+        flex: 1 1 0;
+        min-width: 0;
+    }
+
+    .techcamp-content .ab{
+        margin-top: 0;
+    }
+
+    .techcamp-content .ab h1{
+        font-size: 30px;
+        line-height: 1.3;
+    }
+
+    .techcamp-img{
+        display: block;
+        width: 100%;
+        height: auto;
+        max-height: 460px;
+        margin-top: 0;
+        object-fit: contain;
+    }
+
+    /* COURSES */
+
+    .courses{
+        padding: 0 40px;
+    }
+
+    .courses-h1{
+        font-size: 42px;
+        margin-top: 80px;
+    }
+
+    .grid-2{
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        width: min(100%, 1080px);
+        margin: 40px auto 0;
+        gap: 24px;
+    }
+
+    .grid-2 > div{
+        width: 100%;
+        max-width: none;
+        min-width: 0;
+        padding: 16px;
+    }
+
+    .grid-2 > div img{
+        display: block;
+        width: 100%;
+        max-width: none;
+        height: 220px;
+        object-fit: cover;
+    }
+
+    .grid-2 > div h2{
+        font-size: 22px;
+        line-height: 1.3;
+    }
+
+    .grid-2 > div h1{
+        font-size: 24px;
+    }
+
+    .grid-2 > div p{
+        font-size: 16px;
+    }
+
+    /* BOOT */
+
+    .boot{
+        display: flex;
+        width: min(100%, 1080px);
+        margin: 80px auto;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .boot > div{
+        flex: 1 1 0;
+        min-width: 0;
+    }
+
+    .boot img{
+        display: block;
+        width: 100%;
+        max-width: 480px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .boot h1{
+        margin-top: 0;
+        font-size: clamp(28px, 3vw, 36px);
+        line-height: 1.3;
+    }
+
+    /* PHOTO GALLERY */
+
+    .image{
+        padding: 0 40px;
+    }
+
+    .image h1{
+        font-size: 42px;
+        margin: 60px auto 32px;
+    }
+
+    .images{
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        width: min(100%, 1080px);
+        margin: 0 auto;
+        gap: 24px;
+        overflow: visible;
+    }
+
+    .images img{
+        display: block;
+        width: 100%;
+        max-width: none;
+        height: 190px;
+        object-fit: cover;
+    }
+
+}
+
+/* 1000px and below: overrides the wider 1200px layout above */
+@media (max-width: 1000px){
+    .nav{ position: fixed; padding: 14px 24px; flex-direction: row; align-items: center; gap: 20px; }
+    .menu-toggle, .close-menu{ display: none; }
+    .nav-link{ position: static; width: auto; height: auto; margin-left: auto; padding: 0; background: transparent; box-shadow: none; transform: none; overflow-x: auto; }
+    .nav-link ul{ flex-direction: row; flex-wrap: nowrap; align-items: center; gap: 16px; white-space: nowrap; }
+    .nav-link ul li a{ font-size: 14px; }
+
+    .hero{ padding: 130px 24px 0; }
+    .hero-title{ font-size: clamp(42px, 6vw, 54px); }
+    .hero-image-2{ margin-top: 32px; }
+    .hero-image-2 img{ width: min(100%, 540px); }
+    .shape{ padding: 56px 24px; }
+    .shape3{ width: min(100%, 760px); }
+    .shape-2{ display: none; }
+
+    .about, .services, .techcamp, .courses, .image{ padding-inline: 24px; }
+    .about-content, .techcamp-content{ flex-direction: column; width: min(100%, 700px); margin: 0 auto; gap: 32px; }
+    .about-content{ flex-direction: column-reverse; }
+    .about-img, .techcamp-img{ max-width: 100%; }
+    .ab{ max-width: none; }
+
+    .grid, .grid-2{ grid-template-columns: repeat(2, minmax(0, 1fr)); width: min(100%, 820px); margin-left: auto; margin-right: auto; }
+    .boot{ flex-direction: column-reverse; width: min(100%, 700px); margin: 64px auto; text-align: center; }
+    .images{ grid-template-columns: repeat(3, minmax(0, 1fr)); width: min(100%, 820px); }
+
+    .testimonial{ width: min(100%, 820px); margin: 70px auto; }
+    .faq-section{ padding: 72px 24px; }
+    .faq-wrapper{ width: min(100%, 820px); }
+    .footer{ flex-direction: column; gap: 48px; }
+    .foot1{ max-width: 620px; }
+    .foot2{ grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+    .q--q, .contact{ width: auto; }
+}
+
+/* Mobile layout */
+@media (max-width: 766px){
+    .nav{ padding: 12px 18px; flex-direction: row; align-items: center; }
+    .nav > div:first-child img{ width: 118px; height: auto; margin: 0; }
+    button.menu-toggle{
+        display: flex !important;
+        position: absolute;
+        top: 16px;
+        right: 18px;
+        z-index: 1003;
+        align-items: center;
+        justify-content: center;
+        width: 38px;
+        height: 38px;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        background: transparent;
+        color: #333;
+        font-size: 32px;
+        line-height: 1;
+        cursor: pointer;
+    }
+
+    .nav-link{ position: fixed; inset: 0; z-index: 1002; width: 100%; height: 100dvh; margin: 0; padding: 104px 24px 32px; overflow-y: auto; background: #fff; box-shadow: none; transform: translateX(100%); transition: transform .3s ease; }
+    .nav-link.active{ transform: translateX(0); animation: mobile-menu-in .42s cubic-bezier(.22, 1, .36, 1); }
+    .nav-link.active ~ .menu-toggle{ display: none !important; }
+    .mobile-menu-logo{ display: block; position: absolute; top: 22px; left: 24px; }
+    .mobile-menu-logo img{ display: block; width: 122px; height: auto; }
+    .nav-link ul{ flex-direction: column; align-items: flex-start; gap: 26px; white-space: normal; }
+    .nav-link ul li{ opacity: 0; transform: translateY(14px); }
+    .nav-link.active ul li{ animation: mobile-menu-link-in .4s cubic-bezier(.22, 1, .36, 1) forwards; }
+    .nav-link.active ul li:nth-child(1){ animation-delay: .12s; }
+    .nav-link.active ul li:nth-child(2){ animation-delay: .17s; }
+    .nav-link.active ul li:nth-child(3){ animation-delay: .22s; }
+    .nav-link.active ul li:nth-child(4){ animation-delay: .27s; }
+    .nav-link.active ul li:nth-child(5){ animation-delay: .32s; }
+    .nav-link.active ul li:nth-child(6){ animation-delay: .37s; }
+    .nav-link ul li a{ color: #111; font-size: 18px; font-weight: 500; }
+    .close-menu{ display: block; position: absolute; top: 20px; right: 24px; z-index: 1; border: 0; background: transparent; color: #222; font-size: 34px; font-weight: 300; line-height: 1; cursor: pointer; }
+
+    .hero{ padding: 104px 18px 0; }
+    .hero-title{ font-size: clamp(34px, 10vw, 44px); }
+    .hero-con{ font-size: 16px; }
+    .hero-text ul{ flex-direction: column; align-items: center; gap: 40px; }
+    .hero-image-2{ margin-top: 28px; }
+    .hero-image-2 img{ width: min(100%, 460px); }
+
+    .shape, .about, .services, .techcamp, .courses, .image{ padding-inline: 18px; }
+    .shape{ padding-block: 42px; }
+    .shape3{ width: 100%; }
+
+    .about-h1, .services-h1, .techcamp-h1, .courses-h1, .image h1, .testimonial h1, .faq-section h1{ font-size: 30px; }
+    .about-h2, .ab h1{ font-size: 24px; line-height: 1.3; }
+    .ab p, .services > div p, .grid-2 > div p{ font-size: 16px; }
+
+    .grid, .grid-2{ grid-template-columns: 1fr; width: min(100%, 560px); margin: 32px auto; }
+    .grid img, .grid-2 > div img{ height: 320px; object-fit: cover; border-radius: 10px; }
+    .grid img{ display: block; width: 400px;}
+    .boot{ width: min(100%, 460px); margin: 48px auto; }
+    .boot h1{ font-size: 26px; }
+    .images{ grid-template-columns: 1fr; width: min(100%, 460px); }
+    .images img{ height: 240px; }
+
+    .testimonial{ width: 100%; padding: 0 18px; }
+    .testimonial-track{ gap: 0; }
+    .testimonial-card{ flex-basis: 100%; }
+    .faq-section{ padding: 64px 18px; }
+    .faq-wrapper{ width: 100%; }
+    .faq-btn{ padding: 18px; font-size: 16px; }
+    .faq-content p{ padding: 0 18px 18px; font-size: 15px; }
+
+    .footer{ padding: 40px 20px; }
+    .foot2{ grid-template-columns: 1fr; gap: 32px; }
+}
+
+@keyframes mobile-menu-in{
+    from{ transform: translateX(100%); }
+    to{ transform: translateX(0); }
+}
+
+@keyframes mobile-menu-link-in{
+    from{ opacity: 0; transform: translateY(14px); }
+    to{ opacity: 1; transform: translateY(0); }
+}
+
+/* Small phones */
+@media (max-width: 480px){
+    .nav{
+        padding: 10px 16px;
+    }
+
+    .nav > div:first-child img{
+        width: 108px;
+    }
+
+    button.menu-toggle{
+        top: 12px;
+        right: 16px;
+    }
+
+    .nav-link{
+        padding: 92px 20px 28px;
+    }
+
+    .mobile-menu-logo{
+        top: 18px;
+        left: 20px;
+    }
+
+    .close-menu{
+        top: 18px;
+        right: 20px;
+    }
+
+    .hero{
+        min-height: auto;
+        padding: 92px 16px 0;
+    }
+
+    .hero-title{
+        font-size: 34px;
+        line-height: 1.15;
+    }
+
+    .hero-con{
+        font-size: 15px;
+        line-height: 1.65;
+    }
+
+    .hero-text ul{
+        width: 100%;
+        gap: 16px;
+        margin-top: 28px;
+    }
+
+    .hero-text ul li,
+    .hero-text ul li a{
+        width: 100%;
+    }
+
+    .hero-text ul li a{
+        display: block;
+    }
+
+    .hero-image-2 img{
+        width: 100%;
+        max-width: 400px;
+        padding: 0 !important;
+    } 
+
+    
+
+    .shape,
+    .about,
+    .services,
+    .techcamp,
+    .courses,
+    .image{
+        padding-inline: 16px;
+    }
+
+    .shape{
+        padding-block: 32px;
+    }
+
+    .about{
+        margin-top: 64px;
+    }
+
+    .about-h1,
+    .services-h1,
+    .techcamp-h1,
+    .courses-h1,
+    .image h1,
+    .testimonial h1,
+    .faq-section h1{
+        font-size: 28px;
+    }
+
+    .about-h1{
+        margin-bottom: 28px;
+    }
+
+    .services-h1,
+    .techcamp-h1,
+    .courses-h1{
+        margin-top: 64px;
+    }
+
+    .about-content,
+    .techcamp-content{
+        gap: 24px;
+    }
+
+    .about-h2,
+    .ab h1{
+        font-size: 23px;
+    }
+
+    .ab p,
+    .ab .p,
+    .services > div p,
+    .grid-2 > div p{
+        font-size: 15px;
+    }
+
+    .grid,
+    .grid-2{
+        margin-block: 28px;
+        gap: 24px;
+    }
+
+    .grid img{
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .grid-2 > div{
+        padding: 14px;
+    }
+
+    .grid-2 > div img{
+        height: 240px;
+    }
+
+    .grid-2 > div h2{
+        font-size: 20px;
+    }
+
+    .grid-2 > div h1{
+        font-size: 23px;
+    }
+
+    .services > div a,
+    .grid-2 > div a{
+        width: 100%;
+    }
+
+    .techcamp-img{
+        height: auto;
+    }
+
+    .boot{
+        width: auto;
+        margin: 40px 16px;
+        gap: 24px;
+    }
+
+    .boot h1{
+        font-size: 23px;
+    }
+
+    .images{
+        width: 100%;
+        gap: 16px;
+    }
+
+    .images img{
+        height: 220px;
+    }
+
+    .testimonial{
+        margin: 56px auto;
+        padding-inline: 16px;
+    }
+
+    .testimonial h1{
+        margin-bottom: 32px;
+    }
+
+    .testimonial-copy{
+        min-height: 260px;
+        padding: 22px 18px 70px;
+    }
+
+    .testimonial-copy p{
+        font-size: 15px;
+    }
+
+    .testimonial-copy span{
+        right: 24px;
+        bottom: 28px;
+        font-size: 70px;
+    }
+
+    .testimonial-prev{
+        left: 8px;
+    }
+
+    .testimonial-next{
+        right: 8px;
+    }
+
+    .testimonial-btn{
+        width: 36px;
+        height: 36px;
+    }
+
+    .faq-section{
+        padding: 56px 16px;
+    }
+
+    .faq-section h1{
+        margin-bottom: 32px;
+    }
+
+    .faq-btn{
+        font-size: 15px;
+        padding: 16px;
+    }
+
+    .faq-content p{
+        font-size: 14px;
+        line-height: 1.6;
+        padding: 0 16px 16px;
+    }
+
+    .footer{
+        gap: 36px;
+        padding: 36px 16px;
+    }
+
+    .foot-logo{
+        width: 170px;
+    }
+
+    .foot1 > div p{
+        font-size: 16px;
+    }
+}
+
+
+
